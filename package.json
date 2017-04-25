@@ -1,0 +1,9 @@
+{
+  "name": "ServerQL",
+  "version": "0.0.1",
+  "description": "A modern GraphQL server, powered by Apollo and Webpack.",
+  "main": "src/server.js",
+  "repository": "git@github.com:volcano-group/ServerQL.git",
+  "author": "Alberto Esposito",
+  "license": "MIT"
+}

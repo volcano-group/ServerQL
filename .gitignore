@@ -1,3 +1,7 @@
+#INTELLIJ
+.idea
+
+#NODE
 # Logs
 logs
 *.log
