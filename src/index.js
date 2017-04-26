@@ -1,5 +1,5 @@
-console.log('Hello World!')
+var server = require('graphql-server-micro')
 
-const a = 'miao'
+const myGraphQLSchema = {}
 
-export default a
+module.exports = server.microGraphql({ schema: myGraphQLSchema })

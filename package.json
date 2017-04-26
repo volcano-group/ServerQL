@@ -8,14 +8,16 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "start": "node dist/build.js",
-    "dev": "webpack --watch && nodemon dist/bundle.js",
+    "start": "micro dist/build.js",
+    "dev": "webpack --watch && micro dist/bundle.js",
     "test": "standard",
     "fix": "standard --fix"
   },
   "dependencies": {
     "graphql": "^0.9.3",
+    "graphql-server-micro": "^0.7.2",
     "graphql-tag": "^2.0.0",
+    "micro": "^7.3.2",
     "webpack": "^2.4.1"
   },
   "devDependencies": {
