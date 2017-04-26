@@ -10,7 +10,8 @@
     "build": "webpack",
     "start": "node dist/build.js",
     "dev": "webpack --watch && nodemon dist/bundle.js",
-    "test": "standard"
+    "test": "standard",
+    "fix": "standard --fix"
   },
   "dependencies": {
     "graphql": "^0.9.3",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.4.0",
     "babel-preset-stage-0": "^6.24.1",
