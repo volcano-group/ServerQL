@@ -5,5 +5,17 @@
   "main": "src/server.js",
   "repository": "git@github.com:volcano-group/ServerQL.git",
   "author": "Alberto Esposito",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "start": "node dist/build.js"
+  },
+  "dependencies": {
+    "webpack": "^2.4.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0"
+  }
 }
