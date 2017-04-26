@@ -8,14 +8,41 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "start": "node dist/build.js"
+    "start": "node dist/build.js",
+    "dev": "webpack --watch && nodemon dist/bundle.js",
+    "test": "standard"
   },
   "dependencies": {
+    "graphql": "^0.9.3",
+    "graphql-tag": "^2.0.0",
     "webpack": "^2.4.1"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
-    "babel-preset-env": "^1.4.0"
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "nodemon": "^1.11.0",
+    "source-map-support": "^0.4.14",
+    "standard": "^10.0.2"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": 7.6
+          }
+        }
+      ],
+      "stage-0"
+    ]
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "dist/**"
+    ]
   }
 }

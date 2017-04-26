@@ -1,8 +1,9 @@
 module.exports = {
   entry: './src/index.js',
-  target: 'node',
+  target: 'async-node', // Improved performance in node version 6+
   output: {
-    filename: './dist/bundle.js'
+    filename: './dist/bundle.js',
+    libraryTarget: 'commonjs2' // @TODO Do we need a libraryTarget option?
   },
   module: {
     rules: [
@@ -15,7 +16,14 @@ module.exports = {
             presets: ['env']
           }
         }
+      },
+      {
+        test: /\.(graphql|gql)$/,
+        exclude: /node_modules/,
+        loader: 'graphql-tag/loader'
       }
     ]
-  }
-};
+  },
+  devtool: "source-map"
+}
+
