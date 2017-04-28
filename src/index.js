@@ -1,5 +1,7 @@
-var server = require('graphql-server-micro')
+import myGraphQLSchema from './schema'
 
-const myGraphQLSchema = {}
+const server = require('graphql-server-micro')
 
-module.exports = server.microGraphql({ schema: myGraphQLSchema })
+module.exports = server.microGraphql({
+  schema: myGraphQLSchema
+})

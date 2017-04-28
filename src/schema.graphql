@@ -1,0 +1,9 @@
+#import './users/User.graphql'
+
+type Query {
+
+}
+
+type Mutation {
+
+}

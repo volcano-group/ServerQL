@@ -1,0 +1,16 @@
+type User {
+    id: Int!
+    firstName: String
+    lastName: String
+}
+
+extend type Query {
+    getUser(id: Int!): User
+}
+
+extend type Mutation {
+    createUser(
+        firstName: String!
+        lastName: String!
+    ) : User
+}
