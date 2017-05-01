@@ -1,0 +1,19 @@
+{
+  "passPerPreset": true,
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": 7.9
+        }
+      }
+    ],
+    "es2015",
+    "stage-0"
+  ],
+  "plugins": [
+    "babel-plugin-inline-import"
+  ]
+}
+

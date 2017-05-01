@@ -2,44 +2,35 @@
   "name": "ServerQL",
   "version": "0.0.1",
   "description": "A modern GraphQL server, powered by Apollo and Webpack.",
-  "main": "src/server.js",
+  "main": "src/index.js",
   "repository": "git@github.com:volcano-group/ServerQL.git",
   "author": "Alberto Esposito",
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "start": "node dist/build.js",
-    "dev": "webpack --watch && nodemon dist/bundle.js",
-    "test": "standard",
-    "fix": "standard --fix"
-  },
-  "dependencies": {
-    "graphql": "^0.9.3",
-    "graphql-tag": "^2.0.0",
-    "webpack": "^2.4.1"
+    "start": "node dist/bundle.js",
+    "dev": "babel-node src/index.js"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.0.0",
+    "babel-plugin-inline-import": "^2.0.4",
     "babel-preset-env": "^1.4.0",
     "babel-preset-stage-0": "^6.24.1",
-    "nodemon": "^1.11.0",
-    "source-map-support": "^0.4.14",
-    "standard": "^10.0.2"
+    "standard": "^10.0.2",
+    "webpack": "^2.4.1"
   },
-  "babel": {
-    "presets": [
-      [
-        "env",
-        {
-          "targets": {
-            "node": 7.6
-          }
-        }
-      ],
-      "stage-0"
-    ]
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "graphql": "^0.9.5",
+    "graphql-server-koa": "^0.7.2",
+    "graphql-tag": "^2.0.0",
+    "graphql-tools": "^0.11.0",
+    "koa": "^2.2.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.1.1"
   },
   "standard": {
     "parser": "babel-eslint",
