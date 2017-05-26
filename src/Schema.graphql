@@ -1,8 +1,12 @@
 type Query {
 
+    hello: String
+
 }
 
 type Mutation {
+
+    login: Int
 
 
 }
